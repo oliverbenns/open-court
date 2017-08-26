@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/apps/open-court
+hooks:
+  AfterInstall:
+    - location: deploy/install.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: deploy/start.sh
+      timeout: 300
+      runas: ubuntu

@@ -1,0 +1,39 @@
+{
+  "name": "open-court",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "develop": "nodemon index.js --exec babel-node",
+    "start": "babel-node index.js",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "NODE_ENV=test mocha --compilers js:babel-register --timeout 5000",
+    "fixtures": "babel-node test/fixtures"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverbenns/open-court.git"
+  },
+  "author": "Oliver Benns",
+  "license": "ISC",
+  "homepage": "https://github.com/oliverbenns/open-court#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mocha": "^3.3.0",
+    "mongoose": "^4.9.8",
+    "morgan": "^1.8.1"
+  }
+}
